@@ -1,5 +1,5 @@
 {% set name = "xyzservices" %}
-{% set version = "2021.7.2" %}
+{% set version = "2021.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
 
-  sha256: af34d431bb1cba96ac147b53563831e3b37388f19cb097439e2180c6c2b9f5ef
+  sha256: 369cdca3f7f6de9ac954cbef7aed3c664cf46bad53695916319fdd8d915e60e7
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Source of XYZ tiles providers'
+  summary: Source of XYZ tiles providers
   description: |
     xyzservices is a lightweight library providing a repository of available XYZ
     services offering raster basemap tiles. The repository is provided via
