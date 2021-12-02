@@ -7,25 +7,31 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-
   sha256: c9a9720b294a40e7ccfde09bdba1864c15b970211a4440f5f3147af08139c0d4
+  patches:
+    # https://github.com/geopandas/xyzservices/pull/97
+    - backport_97.patch
 
 build:
+  number: 1
   noarch: python
-  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python >=3.7
     - pip
   run:
-    - python >=3
+    - python >=3.7
 
 test:
   imports:
-    - xyzservices
     - xyzservices.providers
+    - xyzservices
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/geopandas/xyzservices
