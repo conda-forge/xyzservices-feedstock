@@ -1,5 +1,5 @@
 {% set name = "xyzservices" %}
-{% set version = "2021.11.0" %}
+{% set version = "2022.01.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c9a9720b294a40e7ccfde09bdba1864c15b970211a4440f5f3147af08139c0d4
-  patches:
-    # https://github.com/geopandas/xyzservices/pull/97
-    - backport_97.patch
+  sha256: 9520dea97f67b8ed444a6263db33e2bac4e0976b77fa487ddb71b618775205a4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
