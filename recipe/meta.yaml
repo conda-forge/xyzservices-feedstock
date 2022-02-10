@@ -1,5 +1,5 @@
 {% set name = "xyzservices" %}
-{% set version = "2022.1.1" %}
+{% set version = "2022.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 042ddd3c27a7c8707cc555737d0c8a86137e70bb00f8530117bee484993bd6e4
+  sha256: a63c139d284f2547d1071348cf4d76e27660b6bb5f7bf7f8ea02059c1a96f56e
 
 build:
   number: 0
