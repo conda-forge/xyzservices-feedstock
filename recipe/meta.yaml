@@ -1,5 +1,6 @@
 {% set name = "xyzservices" %}
 {% set version = "2024.9.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
