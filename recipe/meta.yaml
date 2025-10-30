@@ -1,5 +1,5 @@
 {% set name = "xyzservices" %}
-{% set version = "2025.4.0" %}
+{% set version = "2025.10.0" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6fe764713648fac53450fbc61a3c366cb6ae5335a1b2ae0c3796b495de3709d8
+  sha256: c6b7648276c98e8222fbec84d9c763128cf3653705017a4d6c4c3652480ee144
 
 build:
   number: 0
